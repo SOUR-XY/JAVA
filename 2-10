@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class helloo {
+
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	Scanner input = new Scanner(System.in);
+	System.out.print("enter an amount in double: ");
+	double amount =input.nextDouble();
+	int ra = (int)(amount * 100);
+	int no = ra / 100;
+    ra = ra % 100;
+    int nq = ra / 25;
+    ra = ra % 25;
+    int nd = ra / 10;
+    ra = ra % 10;
+    int nn = ra / 5;
+    ra = ra / 5;
+    int np = ra;
+	System.out.println("your amout " + amount + "consists of");
+	System.out.println(" " + no + " dollsrs");
+	System.out.println(" " + nq + " quarters");
+	System.out.println(" " + nd + " dimes");
+	System.out.println(" " + nn + " nickels");
+	System.out.println(" " + np + " pennies");
+    }
+
+}
