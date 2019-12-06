@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class helloo {
+
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	long totalmilliseconds = System.currentTimeMillis();
+	long totalseconds = totalmilliseconds / 1000;
+	long currentsecond = totalseconds % 60;
+	long totalminutes = totalseconds / 60;
+	long currentminute = totalminutes % 60;
+	long totalhours = totalminutes / 60;
+	long currenthour = totalhours % 24;
+	System.out.println("Current time is " + currenthour + ":" + currentminute + ":" + currentsecond + " GMT");
+    }
+
+}
