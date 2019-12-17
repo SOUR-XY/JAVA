@@ -1,4 +1,8 @@
-public static void main(String[] args) {
+import java.util.Scanner;
+
+public class Lottery {
+
+ 	public static void main(String[] args) {
 		// Generate a lottery number
 		int lottery = (int)(Math.random() * 100);
 		
@@ -31,3 +35,4 @@ public static void main(String[] args) {
 		else
 			System.out.println("sorry, no match");
 	}
+}
