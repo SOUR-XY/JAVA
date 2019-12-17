@@ -1,0 +1,33 @@
+public static void main(String[] args) {
+		// Generate a lottery number
+		int lottery = (int)(Math.random() * 100);
+		
+		//Prompt the user to enter a guess
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter your lottery pick (two digits): ");
+		int guess =input.nextInt();
+		
+		//Get digits from lottery
+		int lotterydigit1 = lottery / 10;
+		int lotterydigit2 = lottery % 10;
+		
+		//Get digits from guess
+		int guessdigit1 = guess / 10;
+		int guessdigit2 = guess % 10;
+		
+		System.out.println("the lottery number is " + lottery);
+		
+		//Check the guess
+		if(guess == lottery)
+			System.out.println("Exact match:you win $10000");
+		else if (guessdigit2 == lotterydigit1
+				&&guessdigit1 == lotterydigit2)
+			System.out.println("Match all digits");
+		else if(guessdigit1 == lotterydigit1
+				||guessdigit1 == lotterydigit2
+				||guessdigit2 == lotterydigit1
+				||guessdigit2 == lotterydigit2)
+			System.out.println("Match one digit");
+		else
+			System.out.println("sorry, no match");
+	}
