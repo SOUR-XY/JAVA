@@ -1,0 +1,37 @@
+public class CircleWithPrivateDataFields { 
+	/**The radius of the circle*/
+	private double radius =1; 
+	/**The number of objects created*/
+	private static int numberofobjects=0;
+	
+	/**Construct a circle with radius 1*/
+	public CircleWithPrivateDataFields() {
+		numberofobjects++;
+	}
+	
+	/**Construct a circle with a specified radius*/
+	public CircleWithPrivateDataFields(double newradius) {
+		radius = newradius;
+		numberofobjects++;
+	}
+	
+	/**Return radius*/
+	public double getradius() {
+		return radius;
+	}
+	
+	/**Set a new radius*/
+	public void setradius(double newradius) {
+		radius=(newradius>=0)?newradius:0;
+	}
+	
+	/**Return numberOfObjects*/
+	public static int getNumberOfObjects() {
+		return numberofobjects;
+	}
+	
+	/**Return the area of this circle*/
+	public double getarea() {
+		return radius *radius *Math.PI;
+	}
+}
