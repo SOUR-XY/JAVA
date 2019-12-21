@@ -1,0 +1,28 @@
+public class TestPassObject {
+    /**Main method*/
+	public static void main(String[] args) {
+		// Create a circle object with radius 1
+	    CircleWithPrivateDataFields mycircle =
+	    		new CircleWithPrivateDataFields(1);
+	    
+	    //Print areas for radius 1,2,3,4,5
+	    int n=5;
+	    printareas(mycircle,n);
+	    
+	    //See myCircle.radius and times
+	    System.out.println("\n" + "Radius is" +mycircle.getradius());
+	    System.out.println("n is" + n);
+	}
+	    
+    /**Print a table of areas for radius*/
+    public static void printAreas(
+	     CircleWithPrivateDataFields c,int times) {
+	  System.out.println("radius\t\tarea");
+	  while(times>=1)
+	  {
+	      System.out.println(c.getradius()+"\t\t"+c.getarea());
+	      c.setradius(c.getradius()+1);
+	      times--;
+	  }
+   }
+}
