@@ -1,0 +1,19 @@
+public class TestTV {
+	public static void main(String[] args) {
+		TV tvl = new TV();
+		tvl.turnon();
+		tvl.setchannel(30);
+		tvl.setvolume(3);
+		
+		TV tv2 = new TV();
+		tv2.turnon();
+		tv2.channelup();
+		tv2.channelup();
+		tv2.volumeUp();
+		
+		System.out.println("tvl channel is " + tvl.channel + " and volume level is " +
+		tvl.channel + " and volume level is " + tvl.volumeLevel);
+		System.out.println("tv2 channel is " + tv2.channel + " and volume level is " +
+				tv2.channel + " and volume level is " + tv2.volumeLevel);
+	}
+}
